@@ -15,6 +15,8 @@ typedef std::deque<int>::reverse_iterator drevit;
 typedef std::list<int>::iterator lforit;
 typedef std::list<int>::reverse_iterator lrevit;
 typedef std::forward_list<int>::iterator flforit;
+typedef std::map<char, int>::iterator mforit;
+typedef std::map<char, int>::reverse_iterator mrevit;
 
 
 //FUNCIONES ITERADORES
@@ -100,6 +102,28 @@ void iteratorsForwardList(std::forward_list<int> fl)
 	std::cout << std::endl;
 }
 
+void iteratorsMap(std::map<char, int> m)
+{
+	std::cout << "MAP" << std::endl;
+	std::cout << std::endl;
+
+
+	for (mforit it = m.begin(); it != m.end(); it++)
+	{
+		std::cout << it->first << " => " << it->second << " " << std::endl;
+	}
+
+	std::cout << std::endl;
+
+	for (mrevit rit = m.rbegin(); rit != m.rend(); rit++)
+	{
+		std::cout << rit->first << " => " << rit->second << " " << std::endl;
+	}
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+}
+
 void main()
 {
 	std::vector<int> v1{ 3, 6, 7, 4, 8 };
@@ -107,10 +131,18 @@ void main()
 	std::list<int> l1{ 1, 2, 3, 4, 5 };
 	std::forward_list<int> fl1{ 4, 5, 1 ,2 ,3 };
 	std::map<char, int> m1;
+	{
+		m1['a'] = 9;
+		m1['b'] = 8;
+		m1['c'] = 7;
+		m1['d'] = 6;
+	}
 	std::set<int> s1;
+
 
 	iteratorsVector(v1);
 	iteratorsDeque(d1);
 	iteratorsList(l1);
 	iteratorsForwardList(fl1);
+	iteratorsMap(m1);
 }
