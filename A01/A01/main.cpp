@@ -54,6 +54,8 @@ void iteratorsVector(std::vector<int> v)
 		std::cout << *rit << " ";
 	}
 
+	std::cout << std::endl;
+
 	for (cvforit it = v.begin(); it != v.end(); it++)
 	{
 		std::cout << *it << " ";
@@ -64,6 +66,13 @@ void iteratorsVector(std::vector<int> v)
 	for (cvrevit rit = v.rbegin(); rit != v.rend(); rit++)
 	{
 		std::cout << *rit << " ";
+	}
+
+	std::cout << std::endl;
+
+	for (int i = 0; i < v.size(); i++)
+	{
+		std::cout << v[i] << " ";
 	}
 
 	std::cout << std::endl;
@@ -88,6 +97,8 @@ void iteratorsDeque(std::deque<int> d)
 		std::cout << *rit << " ";
 	}
 
+	std::cout << std::endl;
+
 	for (cdforit it = d.begin(); it != d.end(); it++)
 	{
 		std::cout << *it << " ";
@@ -99,6 +110,14 @@ void iteratorsDeque(std::deque<int> d)
 	{
 		std::cout << *rit << " ";
 	}
+
+	std::cout << std::endl;
+
+	for (int i = 0; i < d.size(); i++)
+	{
+		std::cout << d[i] << " ";
+	}
+
 
 	std::cout << std::endl;
 	std::cout << std::endl;
@@ -121,6 +140,8 @@ void iteratorsList(std::list<int> l)
 	{
 		std::cout << *rit << " ";
 	}
+
+	std::cout << std::endl;
 
 	for (clforit it = l.begin(); it != l.end(); it++)
 	{
@@ -149,6 +170,8 @@ void iteratorsForwardList(std::forward_list<int> fl)
 		std::cout << *it << " ";
 	}
 
+	std::cout << std::endl;
+
 	for (cflforit it = fl.begin(); it != fl.end(); it++)
 	{
 		std::cout << *it << " ";
@@ -175,6 +198,8 @@ void iteratorsMap(std::map<char, int> m)
 	{
 		std::cout << rit->first << " => " << rit->second << " " << std::endl;
 	}
+
+	std::cout << std::endl;
 
 	for (cmforit it = m.begin(); it != m.end(); it++)
 	{
@@ -209,6 +234,8 @@ void iteratorsSet(std::set<int> s)
 	{
 		std::cout << *rit << " ";
 	}
+
+	std::cout << std::endl;
 
 	for (csforit it = s.begin(); it != s.end(); it++)
 	{
@@ -277,4 +304,5 @@ void main()
 	iteratorsForwardList(fl1);
 	iteratorsMap(m1);
 	iteratorsSet(s1);
+
 }
