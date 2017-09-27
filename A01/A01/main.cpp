@@ -258,31 +258,50 @@ void main()
 
 	//CONSTRUCTORES///////////////////////////////////////////
 
+	//VECTOR
 	std::vector<int> v0;
 	std::vector<int> v1{ 3, 6, 7, 4, 8 };
-	std::vector<int> v2(v1);
+	std::vector<int> v2(3, 100);
+	std::vector<int> v3(v1);
+	std::vector<int> v4(v1.begin(), v1.end());
 
+	//DEQUE
 	std::deque<int> d0;
 	std::deque<int> d1{ 2, 4, 6, 8, 9 };
-	std::deque<int> d2(d1);
+	std::deque<int> d2(3, 100);
+	std::deque<int> d3(d1);
+	std::deque<int> d4(d1.begin(), d1.end());
 
+	//QUEUE
 	std::queue<int> q1;
-	std::queue<int> q2(q1);
+	std::queue<int> q3(q1);
 
+	//PRIORITY QUEUE
 	std::priority_queue<int> pq1;
 	std::priority_queue<int> pq2(pq1);
 
+	//STACK
 	std::stack<int> st1;
-	std::stack<int> st2(st1);
+	std::stack<int, std::vector<int>> st2;
+	std::stack<int> st3(st1);
 
+	//LIST
 	std::list<int> l0;
 	std::list<int> l1{ 1, 2, 3, 4, 5 };
-	std::list<int> l2(l1);
+	std::list<int> l2(3, 100);
+	std::list<int> l3(l1);
+	std::list<int> l4(l1.begin(), l1.end());
 
+
+	//FORWARD LIST
 	std::forward_list<int> fl0;
 	std::forward_list<int> fl1{ 4, 5, 1 ,2 ,3 };
-	std::forward_list<int> fl2(fl1);
+	std::forward_list<int> fl2(3, 100);
+	std::forward_list<int> fl3(fl1);
+	std::forward_list<int> fl4(fl1.begin(), fl1.end());
+	std::forward_list<int> fl5(std::move(fl4));
 
+	//MAP
 	std::map<char, int> m1;
 	{
 		m1['a'] = 9;
@@ -291,10 +310,15 @@ void main()
 		m1['d'] = 6;
 	}
 	std::map<char, int> m2(m1);
+	std::map <char, int> m3(m1.begin(), m1.end());
 
+
+	//SET
 	std::set<int> s0;
 	std::set<int> s1{ 1, 4, 9, 7 };
-	std::set<int> s2(s1);
+	std::set<int> s2(3, 100);
+	std::set<int> s3(s1);
+	std::set<int> s4(s1.begin(), s1.end());
 
 	//LLAMADAS FUNCIONES ITERADORES/////////////////////////
 
