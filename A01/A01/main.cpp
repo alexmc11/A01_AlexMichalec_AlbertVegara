@@ -72,7 +72,7 @@ void iteratorsVector(std::vector<int> v)
 
 	for (int i = 0; i < v.size(); i++)
 	{
-		std::cout << v[i] << " ";
+		std::cout << (v)[i] << " ";
 	}
 
 	std::cout << std::endl;
@@ -115,7 +115,7 @@ void iteratorsDeque(std::deque<int> d)
 
 	for (int i = 0; i < d.size(); i++)
 	{
-		std::cout << d[i] << " ";
+		std::cout << (d)[i] << " ";
 	}
 
 
@@ -258,7 +258,7 @@ void main()
 
 	//CONSTRUCTORES///////////////////////////////////////////
 
-	//VECTOR
+	//ºVECTOR
 	std::vector<int> v0;
 	std::vector<int> v1{ 3, 6, 7, 4, 8 };
 	std::vector<int> v2(3, 100);
@@ -316,7 +316,6 @@ void main()
 	//SET
 	std::set<int> s0;
 	std::set<int> s1{ 1, 4, 9, 7 };
-	std::set<int> s2(3, 100);
 	std::set<int> s3(s1);
 	std::set<int> s4(s1.begin(), s1.end());
 
@@ -328,5 +327,4 @@ void main()
 	iteratorsForwardList(fl1);
 	iteratorsMap(m1);
 	iteratorsSet(s1);
-
 }
